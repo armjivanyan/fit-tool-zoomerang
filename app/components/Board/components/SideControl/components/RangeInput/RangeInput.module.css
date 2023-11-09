@@ -1,0 +1,43 @@
+.rangeInput {
+  appearance: none;
+  -webkit-appearance: none;
+  /* overflow: hidden; */
+}
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  z-index: 20;
+  height: 20px;
+  width: 20px;
+  border: 1px solid;
+  @apply border-rose-500;
+  border-radius: 50%;
+  margin-top: -8px;
+  cursor: pointer;
+}
+.rangeInput::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  z-index: 0;
+}
+
+.progressBar {
+  height: 5px;
+  width: calc(100%);
+  @apply bg-rose-500;
+  position: relative;
+  top: -13px;
+  z-index: 1;
+}
+
+.valueDiv {
+  width: 50px;
+  height: 30px;
+  @apply bg-slate-200;
+  @apply text-gray-600;
+  text-align: center;
+  line-height: 200%;
+  position: absolute;
+  right: 55px;
+}

@@ -1,0 +1,14 @@
+.menu {
+  position: fixed;
+  top: 0.7rem;
+  left: 1rem;
+}
+
+.menu > div {
+  cursor: pointer;
+}
+
+.selectedPreset {
+  @apply bg-gray-800;
+  color: white;
+}
