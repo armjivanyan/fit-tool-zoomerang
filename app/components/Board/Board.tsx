@@ -21,7 +21,7 @@ const Board = () => {
 
   return (
     <main className="flex h-screen min-h-screen pt-16 justify-center items-center bg-gray-100">
-      {selectedImage && (
+      {showSides && selectedImage && (
         <PresetMenu showPresets={showPresets} setShowPresets={setShowPresets} />
       )}
       {!selectedImage ? (
@@ -34,7 +34,12 @@ const Board = () => {
           backgroundColor={backgroundColor}
         />
       )}
-      {selectedImage && <SideControl setBackgroundColor={setBackgroundColor} />}
+      {showSides && (
+        <SideControl
+          isDisabled={!selectedImage}
+          setBackgroundColor={setBackgroundColor}
+        />
+      )}
     </main>
   );
 };

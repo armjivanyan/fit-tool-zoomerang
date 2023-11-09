@@ -33,7 +33,7 @@ const FileUpload = ({ setSelectedImage }: FileUploadProps) => {
         onDrop={(e) => onDropHandler(e)}
         className={
           styles.largeGaps +
-          " flex justify-center w-3/12 h-64 px-4 bg-slate-200 cursor-pointer"
+          " flex justify-center w-4/12 h-64 px-4 bg-slate-200 cursor-pointer"
         }
       >
         <span className="flex flex-col justify-center items-center space-x-2">

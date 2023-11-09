@@ -43,13 +43,18 @@ const ColorSelect = ({ setBackgroundColor }: ColorSelectProps) => {
         onClick={(e) => handleColorSelect(e)}
         className="flex w-14 h-14 m-1 rounded-md border-2 cursor-pointer transition"
         id={"color_" + i}
+        key={"color_" + i}
         style={{
           backgroundColor: cur,
         }}
       ></div>
     );
   });
-  return <div className="flex flex- flex-wrap">{result}</div>;
+  return (
+    <>
+      <div className="flex flex-wrap">{result}</div>
+    </>
+  );
 };
 
 export default ColorSelect;
