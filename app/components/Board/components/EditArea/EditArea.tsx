@@ -188,7 +188,7 @@ const EditArea = ({
     })
       .then(function (canvas) {
         const link = document.createElement("a");
-        link.download = "table.png";
+        link.download = "img.png";
         link.href = canvas.toDataURL("image/png");
         link.click();
       })
