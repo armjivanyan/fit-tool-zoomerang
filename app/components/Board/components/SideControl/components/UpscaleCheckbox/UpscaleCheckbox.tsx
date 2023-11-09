@@ -80,7 +80,7 @@ const UpscaleCheckbox = () => {
         <label className="relative inline-flex justify-between items-center cursor-pointer">
           <div>
             <input type="checkbox" value="" className="sr-only peer" />
-            <div className="h-7 w-14 bg-gray-200 rounded-md peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[5px] after:bg-white after:border-gray-300 after:border after:rounded-md after:h-6 after:w-6 after:transition-all peer-checked:bg-rose-500"></div>
+            <div className="h-7 w-14 bg-gray-200 rounded-md peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[5px] after:bg-white after:border-gray-300 after:border after:rounded-md after:h-6 after:w-6 transition-colors after:transition-all peer-checked:bg-rose-500"></div>
           </div>
         </label>
       </div>
