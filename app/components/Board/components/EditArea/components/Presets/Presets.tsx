@@ -13,7 +13,6 @@ const Presets = ({
   let [prevCopy, setPrevCopy] = useState("custom");
 
   function updateSelectedPreset(newPreset: string) {
-    console.log(prevCopy, newPreset);
     document.getElementById(prevCopy)?.classList.remove(styles.selectedPreset);
     document.getElementById(newPreset)?.classList.add(styles.selectedPreset);
   }
@@ -25,7 +24,9 @@ const Presets = ({
   }
 
   useEffect(() => {
-    handlePresetChange(activePreset);
+    applyPreset(activePreset);
+    setPrevCopy(activePreset);
+    updateSelectedPreset(activePreset);
   }, [activePreset]);
 
   return (
