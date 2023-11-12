@@ -13,29 +13,26 @@ const Presets = ({
   let [prevCopy, setPrevCopy] = useState("custom");
 
   function updateSelectedPreset(newPreset: string) {
+    console.log(prevCopy, newPreset);
     document.getElementById(prevCopy)?.classList.remove(styles.selectedPreset);
     document.getElementById(newPreset)?.classList.add(styles.selectedPreset);
   }
 
-  function handlePresetChange(
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    newPreset: string
-  ) {
+  function handlePresetChange(newPreset: string) {
     setActivePreset(newPreset);
     setPrevCopy(newPreset);
     updateSelectedPreset(newPreset);
   }
 
   useEffect(() => {
-    applyPreset(activePreset);
-    updateSelectedPreset(activePreset);
+    handlePresetChange(activePreset);
   }, [activePreset]);
 
   return (
     <div className={styles.menu}>
       <div
         id="landscape"
-        onClick={(e) => handlePresetChange(e, "landscape")}
+        onClick={() => handlePresetChange("landscape")}
         className="flex justify-center flex-column items-center w-48 mb-2 bg-white text-slate-500 rounded-3xl h-10 shadow-md"
       >
         <svg
@@ -59,7 +56,7 @@ const Presets = ({
       </div>
       <div
         id="portrait"
-        onClick={(e) => handlePresetChange(e, "portrait")}
+        onClick={() => handlePresetChange("portrait")}
         className="flex justify-center items-center w-48 mb-2 bg-white text-slate-500 rounded-3xl h-10 shadow-md"
       >
         <svg
@@ -84,7 +81,7 @@ const Presets = ({
       </div>
       <div
         id="square"
-        onClick={(e) => handlePresetChange(e, "square")}
+        onClick={() => handlePresetChange("square")}
         className="flex justify-center items-center w-48 mb-2 bg-white text-slate-500 rounded-3xl h-10 shadow-md"
       >
         <svg
@@ -109,7 +106,7 @@ const Presets = ({
       </div>
       <div
         id="custom"
-        onClick={(e) => handlePresetChange(e, "custom")}
+        onClick={() => handlePresetChange("custom")}
         className="flex z-50 justify-center items-center w-48 mb-2 bg-white text-slate-500 rounded-3xl h-10 shadow-md"
       >
         <svg
